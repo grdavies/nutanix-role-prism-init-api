@@ -1,0 +1,48 @@
+---
+  - name: Set PE v1 API base URL fact
+    set_fact:
+      prism_api_v1: "https://{{prism_ip}}:{{port}}/PrismGateway/services/rest/v1"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v2 API base URL fact
+    set_fact:
+      prism_api_v2: "https://{{prism_ip}}:{{port}}/PrismGateway/services/rest/v2.0"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v3 API base URL fact
+    set_fact:
+      prism_api_v3: "https://{{prism_ip}}:{{port}}/api/nutanix/v3"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE lcm API base URL fact
+    set_fact:
+      prism_api_lcm: "https://{{prism_ip}}:{{port}}/lcm/v1.r0.b1"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v4 'clustermgmt' API base URL fact
+    set_fact:
+      prism_api_v4_clustermgmt: "https://{{prism_ip}}:{{port}}/api/clustermgmt/v4.0.a1"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v4 'prism' API base URL fact
+    set_fact:
+      prism_api_v4_prism: "https://{{prism_ip}}:{{port}}/api/prism/v4.0.a1"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v4 'storage' API base URL fact
+    set_fact:
+      prism_api_v4_storage: "https://{{prism_ip}}:{{port}}/api/storage/v4.0.a2"
+    when:
+      - prism_api_auth is defined
+
+  - name: Set PE v4 'vmm' API base URL fact
+    set_fact:
+      prism_api_v4_vmm: "https://{{prism_ip}}:{{port}}/api/vmm/v4.0.a1"
+    when:
+      - prism_api_auth is defined

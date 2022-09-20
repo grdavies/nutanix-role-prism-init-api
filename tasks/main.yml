@@ -1,0 +1,12 @@
+---
+# tasks file for nutanix-ansible-galaxy-role-init-api
+  - import_tasks: set_auth_string.yml
+  
+  - import_tasks: set_api_urls.yml
+    when:
+      - prism_api_auth is defined
+
+  - import_tasks: test_api.yml
+    when:
+      - prism_api_auth is defined
+      - prism_api_v3 is defined

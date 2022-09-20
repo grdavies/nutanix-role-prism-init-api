@@ -1,0 +1,19 @@
+---
+  - name: Generate basic authorization string for PE
+    set_fact:
+      prism_auth_string: "{{ prism_username }}:{{ prism_password }}"
+    when:
+      - prism_username is defined
+      - prism_username != ""
+      - prism_password is defined
+      - prism_password != ""
+
+  - name: Generate authorization header for PE
+    set_fact:
+      prism_api_auth: "Basic {{ prism_auth_string | b64encode(encoding='ascii') }}"
+    when: prism_auth_string is defined
+
+  - name: Unset basic authorization string for PE
+    set_fact:
+      prism_auth_string: ""
+    when: prism_auth_string is defined

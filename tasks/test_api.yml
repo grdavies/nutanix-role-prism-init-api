@@ -1,0 +1,13 @@
+---
+  - name: v3 Test logon to PE
+    uri:
+      url: "{{ prism_api_v3 }}/users/me"
+      method: GET
+      validate_certs: "{{ validate_certs }}"
+      body_format: json
+      headers:
+        Authorization: "{{ prism_api_auth }}"
+      status_code: 200
+      return_content: yes
+    register: pe_login
+    ignore_errors: no
