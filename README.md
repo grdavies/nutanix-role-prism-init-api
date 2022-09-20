@@ -7,13 +7,30 @@ This Ansible role takes input variable for a Prism IP (PE or PC), a username and
 Role Variables
 --------------
 
-| Variable                | Required | Default | Choices                   | Comments                                                                    |
-|-------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
-| prism_ip                | yes      |         |                           | The IP address of the Prism (Element or Central) which you want to connect. |
-| prism_username          | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.         |
-| prism_password          | yes      |         |                           | A valid password for the supplied username.                                 |
-| port                    | no       | 9440    |                           | The Prism TCP port.                                                         |
-| validate_certs          | no       | no      | yes | no                  | Whether to check if Prism UI certificates are valid.                        |
+Inputs
+
+| Variable                 | Required | Default | Choices                   | Comments                                                                    |
+|--------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
+| prism_ip                 | yes      |         |                           | The IP address of the Prism (Element or Central) which you want to connect. |
+| prism_username           | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.         |
+| prism_password           | yes      |         |                           | A valid password for the supplied username.                                 |
+| prism_port               | no       | 9440    |                           | The Prism TCP port.                                                         |
+| validate_certs           | no       | no      | yes | no                  | Whether to check if Prism UI certificates are valid.                        |
+
+
+Outputs
+
+| Variable                 | Required | Default | Choices                   | Comments                                                                    |
+|--------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
+| prism_api_auth           |          |         |                           | Base64 encoded string for be used for basic authentication                  |
+| prism_api_v1             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v1        |
+| prism_api_v2             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v2.0      |
+| prism_api_v3             |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/nutanix/v3                       |
+| prism_api_lcm            |          |         |                           | Set to https://[prism_ip]:[prism_port]/lcm/v1.r0.b1                         |
+| prism_api_v4_clustermgmt |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/clustermgmt/v4.0.a1              |
+| prism_api_v4_prism       |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/prism/v4.0.a1                    |
+| prism_api_v4_storage     |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/storage/v4.0.a2                  |
+| prism_api_v4_vmm         |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/vmm/v4.0.a1                      |
 
 
 Dependencies

@@ -3,5 +3,5 @@
   prism_ip: 1.2.3.4
   prism_username: ""
   prism_password: ""
-  port: 9440
+  prism_port: 9440
   validate_certs: no
