@@ -41,9 +41,9 @@ None.
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+This example will build all necessary facts for future roles consuming the Nutanix REST APIs.
 
-    - hosts: prism_element
+```    - hosts: prism_element
       gather_facts: false
       roles:
         - nutanix-ansible-galaxy-role-init-api
@@ -51,7 +51,7 @@ Including an example of how to use your role (for instance, with variables passe
         prism_ip: 10.38.185.37
         prism_username: admin
         prism_password: nx2Tech165!
-
+```
 
 License
 -------
