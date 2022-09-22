@@ -1,4 +1,8 @@
 ---
+  - name: Set PE v0.8 API base URL fact
+    set_fact:
+      prism_api_v1: "https://{{prism_ip}}:{{prism_port}}/api/nutanix/v0.8"
+
   - name: Set PE v1 API base URL fact
     set_fact:
       prism_api_v1: "https://{{prism_ip}}:{{prism_port}}/PrismGateway/services/rest/v1"
