@@ -9,13 +9,13 @@ Role Variables
 
 Inputs
 
-| Variable                 | Required | Default | Choices                   | Comments                                                                    |
-|--------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
-| prism_ip                 | yes      |         |                           | The IP address of the Prism (Element or Central) which you want to connect. |
-| prism_username           | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.         |
-| prism_password           | yes      |         |                           | A valid password for the supplied username.                                 |
-| prism_port               | no       | 9440    |                           | The Prism TCP port.                                                         |
-| validate_certs           | no       | no      | yes | no                  | Whether to check if Prism UI certificates are valid.                        |
+| Variable                 | Required | Default | Choices                   | Comments                                                                             |
+|--------------------------|----------|---------|---------------------------|--------------------------------------------------------------------------------------|
+| nutanix_host             | yes      |         |                           | The IP address or FQDN for the Prism (Element or Central) which you want to connect. |
+| prism_username           | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.                  |
+| prism_password           | yes      |         |                           | A valid password for the supplied username.                                          |
+| prism_port               | no       | 9440    |                           | The Prism TCP port.                                                                  |
+| validate_certs           | no       | no      | yes | no                  | Whether to check if Prism UI certificates are valid.                                 |
 
 
 Outputs
@@ -43,14 +43,15 @@ Example Playbook
 
 This example will build all necessary facts for future roles consuming the Nutanix REST APIs.
 
-```    - hosts: prism_element
-      gather_facts: false
-      roles:
-        - nutanix-ansible-galaxy-role-init-api
-      vars:
-        prism_ip: 10.38.185.37
-        prism_username: admin
-        prism_password: nx2Tech165!
+```
+- hosts: prism_element
+  gather_facts: false
+  roles:
+    - nutanix-ansible-galaxy-role-init-api
+  vars:
+    nutanix_host: 10.38.185.37
+    nutanix_username: admin
+    nutanix_password: nx2Tech165!
 ```
 
 License

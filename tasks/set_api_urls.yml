@@ -1,36 +1,36 @@
 ---
   - name: Set PE v0.8 API base URL fact
     set_fact:
-      prism_api_v1: "https://{{prism_ip}}:{{prism_port}}/api/nutanix/v0.8"
+      prism_api_v08: "https://{{nutanix_host}}:{{prism_port}}/api/nutanix/v0.8"
 
   - name: Set PE v1 API base URL fact
     set_fact:
-      prism_api_v1: "https://{{prism_ip}}:{{prism_port}}/PrismGateway/services/rest/v1"
+      prism_api_v1: "https://{{nutanix_host}}:{{prism_port}}/PrismGateway/services/rest/v1"
 
   - name: Set PE v2 API base URL fact
     set_fact:
-      prism_api_v2: "https://{{prism_ip}}:{{prism_port}}/PrismGateway/services/rest/v2.0"
+      prism_api_v2: "https://{{nutanix_host}}:{{prism_port}}/PrismGateway/services/rest/v2.0"
 
   - name: Set PE v3 API base URL fact
     set_fact:
-      prism_api_v3: "https://{{prism_ip}}:{{prism_port}}/api/nutanix/v3"
+      prism_api_v3: "https://{{nutanix_host}}:{{prism_port}}/api/nutanix/v3"
 
   - name: Set PE lcm API base URL fact
     set_fact:
-      prism_api_lcm: "https://{{prism_ip}}:{{prism_port}}/lcm/v1.r0.b1"
+      prism_api_lcm: "https://{{nutanix_host}}:{{prism_port}}/lcm/v1.r0.b1"
 
   - name: Set PE v4 'clustermgmt' API base URL fact
     set_fact:
-      prism_api_v4_clustermgmt: "https://{{prism_ip}}:{{prism_port}}/api/clustermgmt/v4.0.a1"
+      prism_api_v4_clustermgmt: "https://{{nutanix_host}}:{{prism_port}}/api/clustermgmt/v4.0.a1"
 
   - name: Set PE v4 'prism' API base URL fact
     set_fact:
-      prism_api_v4_prism: "https://{{prism_ip}}:{{prism_port}}/api/prism/v4.0.a1"
+      prism_api_v4_prism: "https://{{nutanix_host}}:{{prism_port}}/api/prism/v4.0.a1"
 
   - name: Set PE v4 'storage' API base URL fact
     set_fact:
-      prism_api_v4_storage: "https://{{prism_ip}}:{{prism_port}}/api/storage/v4.0.a2"
+      prism_api_v4_storage: "https://{{nutanix_host}}:{{prism_port}}/api/storage/v4.0.a2"
 
   - name: Set PE v4 'vmm' API base URL fact
     set_fact:
-      prism_api_v4_vmm: "https://{{prism_ip}}:{{prism_port}}/api/vmm/v4.0.a1"
+      prism_api_v4_vmm: "https://{{nutanix_host}}:{{prism_port}}/api/vmm/v4.0.a1"
