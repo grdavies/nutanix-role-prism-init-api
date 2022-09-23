@@ -1,0 +1,21 @@
+---
+  - name:
+    ansible.builtin.fail:
+      msg: "the variable 'nutanix_host' must be defined."
+    when:
+      - nutanix_host is not defined
+      - nutanix_host != ""
+
+  - name:
+    ansible.builtin.fail:
+      msg: "the variable 'nutanix_username' must be defined."
+    when:
+      - nutanix_username is not defined
+      - nutanix_username != ""
+
+  - name:
+    ansible.builtin.fail:
+      msg: "the variable 'nutanix_password' must be defined."
+    when:
+      - nutanix_password is not defined
+      - nutanix_password != ""
