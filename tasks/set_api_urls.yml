@@ -17,7 +17,7 @@
 
   - name: Set PE lcm API base URL fact
     set_fact:
-      nutanix_api_lcm: "https://{{nutanix_host}}:{{nutanix_port}}/lcm/v1.r0.b1"
+      nutanix_api_lcm: "https://{{nutanix_host}}:{{nutanix_port}}/api/lcm/v4.0.a1"
 
   - name: Set PE v4 'clustermgmt' API base URL fact
     set_fact:
