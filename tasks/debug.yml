@@ -1,0 +1,37 @@
+---
+  - debug:
+      var: nutanix_host
+    when: nutanix_debug
+
+  - debug:
+      var: nutanix_username
+    when: nutanix_debug
+
+  - debug:
+      var: nutanix_username
+    when: nutanix_debug
+
+  - debug:
+      var: nutanix_auth_string
+    when: nutanix_debug
+
+  - debug:
+      var: nutanix_api_auth
+    when: nutanix_debug
+
+
+  - debug:
+      var: nutanix_api_v08
+      var: nutanix_api_v1
+      var: nutanix_api_v2
+      var: nutanix_api_v3
+      var: nutanix_api_lcm
+      var: nutanix_api_v4_clustermgmt
+      var: nutanix_api_v4_prism
+      var: nutanix_api_v4_storage
+      var: nutanix_api_v4_vmm
+    when: nutanix_debug
+
+  - debug:
+      var: nutanix_api_login.json
+    when: nutanix_debug

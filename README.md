@@ -12,25 +12,26 @@ Inputs
 | Variable                 | Required | Default | Choices                   | Comments                                                                             |
 |--------------------------|----------|---------|---------------------------|--------------------------------------------------------------------------------------|
 | nutanix_host             | yes      |         |                           | The IP address or FQDN for the Prism (Element or Central) which you want to connect. |
-| prism_username           | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.                  |
-| prism_password           | yes      |         |                           | A valid password for the supplied username.                                          |
-| prism_port               | no       | 9440    |                           | The Prism TCP port.                                                                  |
+| nutanix_username         | yes      |         |                           | A valid username with appropriate rights to access the Nutanix API.                  |
+| nutanix_password         | yes      |         |                           | A valid password for the supplied username.                                          |
+| nutanix_port             | no       | 9440    |                           | The Prism TCP port.                                                                  |
 | validate_certs           | no       | no      | yes | no                  | Whether to check if Prism UI certificates are valid.                                 |
+| nutanix_debug            | no       | False   | True | False              | Whether to output variable contents for debugging purposes.                          |
 
 
 Outputs
 
-| Variable                 | Required | Default | Choices                   | Comments                                                                    |
-|--------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
-| prism_api_auth           |          |         |                           | Base64 encoded string for be used for basic authentication                  |
-| prism_api_v1             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v1        |
-| prism_api_v2             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v2.0      |
-| prism_api_v3             |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/nutanix/v3                       |
-| prism_api_lcm            |          |         |                           | Set to https://[prism_ip]:[prism_port]/lcm/v1.r0.b1                         |
-| prism_api_v4_clustermgmt |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/clustermgmt/v4.0.a1              |
-| prism_api_v4_prism       |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/prism/v4.0.a1                    |
-| prism_api_v4_storage     |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/storage/v4.0.a2                  |
-| prism_api_v4_vmm         |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/vmm/v4.0.a1                      |
+| Variable                   | Required | Default | Choices                   | Comments                                                                    |
+|----------------------------|----------|---------|---------------------------|-----------------------------------------------------------------------------|
+| nutanix_api_auth           |          |         |                           | Base64 encoded string for be used for basic authentication                  |
+| nutanix_api_v1             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v1        |
+| nutanix_api_v2             |          |         |                           | Set to https://[prism_ip]:[prism_port]/PrismGateway/services/rest/v2.0      |
+| nutanix_api_v3             |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/nutanix/v3                       |
+| nutanix_api_lcm            |          |         |                           | Set to https://[prism_ip]:[prism_port]/lcm/v1.r0.b1                         |
+| nutanix_api_v4_clustermgmt |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/clustermgmt/v4.0.a1              |
+| nutanix_api_v4_prism       |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/prism/v4.0.a1                    |
+| nutanix_api_v4_storage     |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/storage/v4.0.a2                  |
+| nutanix_api_v4_vmm         |          |         |                           | Set to https://[prism_ip]:[prism_port]/api/vmm/v4.0.a1                      |
 
 
 Dependencies

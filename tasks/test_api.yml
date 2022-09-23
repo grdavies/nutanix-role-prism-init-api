@@ -9,5 +9,5 @@
         Authorization: "{{ nutanix_api_auth }}"
       status_code: 200
       return_content: yes
-    register: pe_login
+    register: nutanix_api_login
     ignore_errors: no
