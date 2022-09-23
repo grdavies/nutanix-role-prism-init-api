@@ -1,18 +1,18 @@
 ---
 # tasks file for nutanix-ansible-galaxy-role-init-api
-  - ansible.builtin.include_tasks: check_variables.yml
+  - import_tasks: check_variables.yml
 
-  - ansible.builtin.include_tasks: set_auth_string.yml
+  - import_tasks: set_auth_string.yml
 
-  - ansible.builtin.include_tasks: set_api_urls.yml
+  - import_tasks: set_api_urls.yml
     when:
       - nutanix_api_auth is defined
 
-  - ansible.builtin.include_tasks: test_api.yml
+  - import_tasks: test_api.yml
     when:
       - nutanix_api_auth is defined
       - nutanix_api_v3 is defined
 
-  - ansible.builtin.include_tasks: debug.yml
+  - include_tasks: debug.yml
     when:
       - nutanix_debug
