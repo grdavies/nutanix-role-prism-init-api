@@ -29,3 +29,4 @@
       var: "{{ item }}"
     loop:
       - nutanix_api_login.json
+      - nutanix_endpoint_prism_type

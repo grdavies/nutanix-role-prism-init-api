@@ -11,3 +11,7 @@
       return_content: yes
     register: nutanix_api_login
     ignore_errors: no
+
+  - name: Set Prism Type
+    set_fact:
+      nutanix_endpoint_prism_type: "{{ nutanix_api_login.x_ntnx_env }}"
