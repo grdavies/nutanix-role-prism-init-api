@@ -20,3 +20,11 @@
       nutanix_auth_string: ""
     no_log: True
     when: nutanix_auth_string is defined
+
+  - name: Debug set_auth_string.yml variables
+    debug:
+      var: "{{ item }}"
+    loop:
+      - nutanix_auth_string
+      - nutanix_api_auth
+    when: nutanix_debug

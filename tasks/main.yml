@@ -12,7 +12,3 @@
     when:
       - nutanix_api_auth is defined
       - nutanix_api_v3 is defined
-
-  - include_tasks: debug.yml
-    when:
-      - nutanix_debug

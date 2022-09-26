@@ -1,4 +1,15 @@
 ---
+  - name: Debug set_api_urls.yml variables
+    debug:
+      var: "{{ item }}"
+    loop:
+      - nutanix_host
+      - nutanix_username
+      - nutanix_password
+      - nutanix_auth_string
+      - nutanix_api_auth
+    when: nutanix_debug
+
   - name: Set PE v0.8 API base URL fact
     set_fact:
       nutanix_api_v08: "https://{{nutanix_host}}:{{nutanix_port}}/api/nutanix/v0.8"

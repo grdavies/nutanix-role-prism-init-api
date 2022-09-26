@@ -15,3 +15,11 @@
   - name: Set Prism Type
     set_fact:
       nutanix_endpoint_prism_type: "{{ nutanix_api_login.x_ntnx_env }}"
+
+  - name: Debug set_auth_string.yml variables
+    debug:
+      var: "{{ item }}"
+    loop:
+      - nutanix_api_login
+      - nutanix_endpoint_prism_type
+    when: nutanix_debug
